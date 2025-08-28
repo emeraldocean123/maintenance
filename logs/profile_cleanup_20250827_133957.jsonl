@@ -1,0 +1,3 @@
+{"ts":"2025-08-27T13:39:57.839-07:00","event":"log_start","name":"profile_cleanup"}
+{"level":"ERROR","ts":"2025-08-27T13:39:57.889-07:00","message":"The term 'Audit-UserProfile' is not recognized as a name of a cmdlet, function, script file, or executable program.\r\nCheck the spelling of the name, or if a path was included, verify that the path is correct and try again."}
+{"ts":"2025-08-27T13:39:57.895-07:00","event":"log_end"}

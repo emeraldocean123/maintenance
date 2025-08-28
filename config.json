@@ -1,0 +1,107 @@
+{
+  "windows": {
+    "preserveFolders": ["Reolink", "Mouse Without Borders", "Mylio", "Google Drive"],
+    "excludePaths": ["Google Drive", "Mylio", ".Mylio_Catalog"],
+    "flattenDownloads": true,
+    "restoreMouseWithoutBorders": true,
+    "deleteCleanupReports": true,
+    "deleteOBSBackups": true
+  },
+  "github": {
+    "owner": "emeraldocean123",
+    "disableActions": true,
+    "closeIssues": true,
+    "deleteWorkflowFiles": false,
+    "tokenEnvVar": "GITHUB_TOKEN"
+  },
+  "nix": {
+    "enable": true,
+    "reposRoot": [".."],
+    "safeFixes": ["underscore_unused", "repeated_keys"],
+    "logsDir": "maintenance/logs"
+  },
+  "reports": {
+    "enabled": true,
+    "attachZip": true,
+    "includePaths": [
+      "${USERPROFILE}\\Downloads",
+      "${USERPROFILE}\\Desktop",
+      "${USERPROFILE}\\Documents",
+      "${USERPROFILE}\\Pictures",
+      "${USERPROFILE}\\Videos"
+    ],
+    "excludeDirNames": ["node_modules", ".git", ".venv", "venv", "dist", "build", "out", ".direnv", "target"],
+    "topFiles": 20
+  },
+  "profileAudit": {
+    "enable": true,
+    "keepRoot": [
+      "Desktop", "Documents", "Downloads", "Pictures", "Videos", "Music",
+      "OneDrive", "Google Drive", "iCloudDrive", "3D Objects", "Saved Games",
+      "Links", "Favorites", "Contacts", "Searches"
+    ],
+    "preserveNames": ["Reolink", "Mouse Without Borders", "Mylio", "Google Drive", "Google Drive Streaming", ".Mylio_Catalog"],
+    "moveRules": {
+      "dev": "Documents\\dev",
+      "scripts": "Documents\\scripts",
+      "Projects": "Documents\\Projects",
+      "project*": "Documents\\Projects",
+      "notes": "Documents\\Notes",
+      "Docs": "Documents",
+      "documents_backup*": "Documents\\_Archive\\Backups",
+      "OBS_Backups": "Documents\\_Archive\\OBS_Backups",
+      "MouseWithoutBorders": "Desktop\\MouseWithoutBorders"
+    },
+    "deleteNames": ["maintenance", "node_modules"],
+    "documentsConsolidation": {
+      "aliasesToRoot": ["Docs", "docs", "Documents_old", "documents_old"],
+      "projects": ["Projects", "projects", "Project", "project*"],
+      "notes": ["Notes", "notes"]
+    },
+    "removeEmptyDirs": true,
+    "emptyDirsIgnoreFiles": ["desktop.ini", "Thumbs.db"],
+    "projectsMove": {
+      "enable": true,
+      "destRel": "Documents\\dev",
+      "detectFiles": ["package.json","package-lock.json","yarn.lock","pnpm-lock.yaml","pnpm-workspace.yaml","tsconfig.json",".gitignore"],
+      "detectDirs": ["node_modules",".git"]
+    }
+  },
+  "logging": {
+    "json": true,
+    "text": true,
+    "level": "INFO",
+    "retentionDays": 90,
+    "maxFiles": 500
+  },
+  "notifications": {
+    "toast": {
+      "enabled": true
+    },
+    "email": {
+      "enabled": false,
+      "smtpServer": "",
+      "smtpPort": 587,
+      "useSsl": true,
+      "from": "",
+      "to": [""],
+      "subjectPrefix": "[Maintenance]",
+      "usernameEnv": "",
+      "passwordEnv": "",
+      "passwordSecret": "smtp_password",
+      "journalLines": 10
+      ,"logDigestLines": 5,
+      "logDigestLevels": ["ERROR", "WARN"]
+    }
+  },
+  "pssa": {
+    "enabled": true,
+    "severity": "Warning",
+    "treatAsErrorRules": [
+      "PSUseDeclaredVarsMoreThanAssignments",
+      "PSAvoidUsingWriteHost",
+      "PSAvoidUsingPositionalParameters"
+    ],
+    "fixFormat": true
+  }
+}

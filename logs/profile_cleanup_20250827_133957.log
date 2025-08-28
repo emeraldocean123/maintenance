@@ -1,0 +1,4 @@
+# Log start: 2025-08-27T13:39:57.835-07:00 - profile_cleanup
+[2025-08-27T13:39:57.889-07:00] [ERROR] The term 'Audit-UserProfile' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+# Log end: 2025-08-27T13:39:57.895-07:00
