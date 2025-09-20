@@ -27,3 +27,7 @@ Run  for interactive maintenance or use individual scripts as needed.
 - PowerShell 7+
 - Windows 10/11
 - DPAPI for secure credential storage
+## Shared Script Dependencies
+
+This toolkit depends on the centralized helpers stored in ~/Documents/dev/shared for bootstrap and validation tasks. Ensure that repository is kept in sync so optional workflows (like the consolidated Nix helpers) remain available.
+
